@@ -6,9 +6,12 @@ NetAddress dest;
 
 
 int rectWidth;
+boolean drawing = false;
+int lineSize = 1;
+float strokeColor1 = 0, strokeColor2 = 0, strokeColor3 = 0;
    
 void setup() {
-  size(640, 480);
+  size(1920, 1080);
   noStroke();
   background(0);
   rectWidth = width/4;
@@ -18,15 +21,27 @@ void setup() {
 }
 
 void draw() { 
-  
-  if (key == 99) {
-    ellipse(mouseX, mouseY, 10, 10);
+  stroke(strokeColor1, strokeColor2, strokeColor3);
+  if (drawing == true) {
+    strokeWeight(lineSize);
+    line(mouseX, mouseY, pmouseX, pmouseY);
   }
   // keep draw() here to continue looping while waiting for keys
 }
 
 void keyPressed() {
   int keyIndex = -1;
+  if (key == 99)
+    drawing = (!drawing);
+  else if(key == 106)
+    lineSize += 1;
+  else if(key == 122)
+    lineSize -= 1;
+  else if(key == 108){
+    strokeColor1 = random(0, 255);
+    strokeColor2 = random(0, 255);
+    strokeColor3 = random(0, 255);
+  }
   if (key >= 'A' && key <= 'Z') {
     keyIndex = key - 'A';
   } else if (key >= 'a' && key <= 'z') {
