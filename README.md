@@ -1,11 +1,12 @@
 # Team Members
 Kevin Flynn & Jonathan Fermin
 # Goals
-Use some kind of hardware tool as an input in order to learn regression and classification
+Create an input using some kind of hardware tool
+Learn to create a project that incorporates regression and classification
 # Tools
 We used an xbox controller as our hardware input and processing to write our code. For output we used _________
 # ML Choices
-___________
+
 # Accomplished
 During out project, we were successfully able to incorporate using an xbox controller as an input to control an output. We were able to take the inputs of the control and map them to a keyboard, then send the keyboard ASCII values as input to wekinator to control our output. Not only did this control a small drawing program, but it also controlled ____________
 # Challenges
